@@ -15,6 +15,10 @@ Step#1: Install git ---------> Git bash  : Done
 Step#2: Create a project Dir ------------> : DOne
 
 Step#3: Confgure git
+git config is a command used to set or view configuration options for Git. These configurations can be set at different levels:
+System-level: Applies to all users on the system.
+Global-level: Applies to all repositories for the current user.
+Local-level: Applies only to the specific repository.
 git config --global user.name "kumar"
 git config --global user.email "kumar@gmail.com"
 git config --global core.editor "vi"
@@ -22,10 +26,16 @@ git config --list
 
 Step # 4: Intialize the Git Repo
 git init
+A hidden .git directory is created in your project's root folder. 
+This directory contains all the metadata and version control information for your repository.
+Git starts tracking changes in the directory where git init was run.
 Initialized empty Git repository in /root/myProjectA/.git/
 
 Step 5: Status
 git status
+It helps you understand what changes have been made.
+It shows which files are staged, unstaged, or untracked.
+It provides hints about what to do next (e.g., git add to stage changes or git commit to save them).
 On branch master
 No commits yet
 Untracked files:
@@ -33,8 +43,11 @@ Untracked files:
         fileA.txt
 nothing added to commit but untracked files present (use "git add" to track)
 
+
 step 6: Add
 git add means ======> untracked area ---> git add ---> stagging area
+It adds changes from your working directory to the staging area (also called the index).
+The staging area is a temporary area where you prepare changes before committing them to the repository.
 git add fileA.txt
 On branch master
 No commits yet
@@ -42,8 +55,15 @@ Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   fileA.txt
 
+
 Step 7: commit
 git commit means ======> untracked area ---> git add ---> stagging area ---> git commit ---> file will move git repo
+It takes the changes in the staging area (added with git add) and records them as a new commit.
+Each commit has a unique identifier and includes:
+The changes made.
+The author's name and email.
+A timestamp.
+A commit message.
 git commit -m "added a new file"
 [master (root-commit) 3a6fc9f] added a new file
  1 file changed, 0 insertions(+), 0 deletions(-)
@@ -51,6 +71,11 @@ git commit -m "added a new file"
 
 Step 8: log
 git log
+The git log command is used to display the commit history of a Git repository
+Commit hash: A unique identifier for the commit (e.g., 1a2b3c4d5e6f7g8h9i0j).
+Author: The name and email of the person who made the commit.
+Date: The timestamp of when the commit was made.
+Commit message: The description of the changes made in the commit.
 commit e4918d24e6e760dbfc51a03e771046602795e0ec (HEAD -> master)
 Author: karthick <karthicksuresh0905@gmail.com>
 Date:   Fri Mar 14 09:30:06 2025 +0000
