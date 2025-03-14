@@ -5,3 +5,5 @@ step 1 : create a file .gitignore
 step 2 : what ever the file git no needs to track put the name of the file inside .gitignore
 
 step 3 : git add and git commit for .gitignore 
+
+step 4 : In .gitignore file if you entered eg: *.log, *.txt it menas everything it will ignore after you created new file also 
