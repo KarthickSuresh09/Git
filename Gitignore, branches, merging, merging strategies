@@ -1,1 +1,7 @@
+GITIGNORE
 
+step 1 : create a file .gitignore
+
+step 2 : what ever the file git no needs to track put the name of the file inside .gitignore
+
+step 3 : git add and git commit for .gitignore 
