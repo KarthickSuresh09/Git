@@ -43,7 +43,7 @@ Changes to be committed:
         new file:   fileA.txt
 
 Step 7: commit
-git commit means ======> untracked area ---> git add ---> stagging area ---> git repo
+git commit means ======> untracked area ---> git add ---> stagging area ---> git commit ---> file will move git repo
 git commit -m "added a new file"
 [master (root-commit) 3a6fc9f] added a new file
  1 file changed, 0 insertions(+), 0 deletions(-)
