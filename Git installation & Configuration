@@ -48,3 +48,16 @@ git commit -m "added a new file"
 [master (root-commit) 3a6fc9f] added a new file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 fileA.txt
+
+Step 8: log
+git log
+commit e4918d24e6e760dbfc51a03e771046602795e0ec (HEAD -> master)
+Author: karthick <karthicksuresh0905@gmail.com>
+Date:   Fri Mar 14 09:30:06 2025 +0000
+    added 2nd file
+commit 3a6fc9f84e8113fc1d0f300fc6e9efb3fff4d352
+Author: karthick <karthicksuresh0905@gmail.com>
+Date:   Fri Mar 14 09:17:10 2025 +0000
+    added a new file
+
+
