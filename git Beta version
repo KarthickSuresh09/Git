@@ -1,0 +1,589 @@
+What is your Job profile?
+WHat is your DevOps exp?
+Why you want to learn DevOps?
+======================================
+
+VCS : Version COntrol System
+------------------------------
+
+A Version Control System (VCS) is a tool that helps manage changes to source code or files over time, tracking revisions and enabling collaboration among developers. 
+
+Key Concepts in VCS
+
+Versioning : The ability to keep track of changes in files, code, or configurations over time.
+
+
+GitLab $ git --version
+git version 2.40.1
+GitLab $
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+All the git commands:
+
+git + verb 
+
+===========================================================
+Step#1: Install git ---------> Git bash  : Done
+
+Step#2: Create a project Dir ------------> : DOne
+
+Step#3: Confgure git
+
+git config --global user.name "kumar"
+git config --global user.email "kumar@gmail.com"
+git config --global core.editor "vi"
+git config --list
+
+Step # 4: Intialize the Git Repo
+
+$ git init
+
+GitLab $ git init
+
+Initialized empty Git repository in /root/myProjectA/.git/
+GitLab $
+
+(dot) .git --------> Hidden
+ls ------> this command not going to work
+
+ls -al -------> ALL files and folder 
+
+--------------------
+
+fileA.txt----> Dir
+
+$ git status
+
+GitLab $ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fileA.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+GitLab $
+
+
+$  git add fileA.txt
+
+
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   fileA.txt
+
+GitLab $
+
+
+GitLab $ git commit -m "Added a New file"
+[master (root-commit) 3e55f07] Added a New file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fileA.txt
+GitLab $
+
+
+GitLab $ git status
+On branch master
+nothing to commit, working tree clean
+GitLab $
+
+
+
+
+
+
+commit cbd3bdec57589e38b932916bb30f33c0561617c8 (HEAD -> master)
+Author: kumar <kumar@gmail.com>
+Date:   Wed Oct 30 03:25:48 2024 +0000
+
+    Added 2nd file
+
+commit 3e55f07ab4c8e964c0c92135f38aa3be72fc77e1
+Author: kumar <kumar@gmail.com>
+Date:   Wed Oct 30 03:19:43 2024 +0000
+
+    Added a New file
+GitLab $
+
+
+-------------------------------
+
+Git Lab $ ls
+fileA.txt  fileB.txt
+Git Lab $
+
+
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+
+
+Git Lab $ vi fileC.txt
+Git Lab $ ls
+fileA.txt  fileB.txt  fileC.txt
+Git Lab $ cat fileC.txt
+This is my Py code
+Git Lab $
+
+
+Git Lab $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fileC.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $ git add fileC.txt
+Git Lab $
+Git Lab $ git commit -m "Added the FILE C, with Py code"
+[master 3571434] Added the FILE C, with Py code  3571434  --------------->
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fileC.txt
+Git Lab $
+
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+
+
+
+Git Lab $ vi fileC.txt
+Git Lab $ cat fileC.txt
+This is my Py code
+This is my 2nd line of code
+Git Lab $
+Git Lab $
+Git Lab $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   fileC.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Git Lab $
+
+Git Lab $ git add fileC.txt
+Git Lab $ git commit -m "Added new line of code ay fileC"
+[master 3960e0c] Added new line of code ay fileC
+ 1 file changed, 1 insertion(+)
+Git Lab $
+
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+------------------------------------------------------
+GIT IGNORE
+--------------
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.mov
+        2.mov
+
+Git Lab $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        1.mov
+        2.mov
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $
+
+
+Git Lab $ vi .gitignore
+Git Lab $
+Git Lab $
+Git Lab $ cat .gitignore
+1.mov
+2.mov
+Git Lab $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $
+
+Git Lab $ git add .gitignore
+Git Lab $
+Git Lab $
+Git Lab $ git commit -m "Added gitignore"
+[master 5a24d96] Added gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+Git Lab $
+Git Lab $
+Git Lab $ git status
+On branch master
+nothing to commit, working tree clean
+Git Lab $
+
+-----------------------------
+Git Branching
+--------------------
+
+Git branching is a feature that allows you to create separate lines of development within a single repository. 
+
+Each branch represents an isolated version of the project, so you can work on new features or bug fixes without affecting the main codebase. 
+
+
+Git Lab $
+Git Lab $
+Git Lab $ git branch feature-branch
+Git Lab $
+Git Lab $
+Git Lab $ git branch
+  feature-branch
+* master
+Git Lab $
+
+
+Git Lab $ git checkout feature-branch
+Switched to branch 'feature-branch'
+Git Lab $ git branch
+* feature-branch
+  master
+Git Lab $
+
+testfile.txt
+Git Lab $ touch featureFile.txt
+Git Lab $ ls
+featureFile.txt  testfile.txt
+Git Lab $ git status
+On branch feature-branch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        featureFile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Git Lab $
+
+
+
+Git Lab $ git branch
+* feature-branch
+  master
+Git Lab $
+Git Lab $
+Git Lab $ git checkout master
+Switched to branch 'master'
+Git Lab $
+
+
+
+Git Lab $ git checkout master
+Switched to branch 'master'
+Git Lab $
+Git Lab $
+Git Lab $ ls
+testfile.txt
+Git Lab $ git branch
+  feature-branch
+* master
+Git Lab $
+Git Lab $
+
+
+Git Lab $ git merge feature-branch
+Updating cd4b26f..b1452ca
+Fast-forward
+ featureFile.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 featureFile.txt
+Git Lab $
+
+
+Summary:
+-----------
+
+\_ Create a branch: git branch branch-name
+\_ Switch to a branch: git checkout branch-name
+\_ UPGRADED/FIX at Feature Branch
+\_ List branches: git branch
+\_ SWITCH to MASTER/MAIN
+\_ Merge branches: git merge branch-name
+\_ ALL the FIX/UPGRADE is now available at MASTER
+
+
+=======================================
+
+GIT Branching
+---------------------
+
+git checkout -b feature-branch
+
+
+Git $ git merge feature-branch
+Merge made by the 'ort' strategy.
+ example_feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example_feature.txt
+
+
+
+
+Git $ git status
+On branch master
+nothing to commit, working tree clean
+
+Git $ git log
+commit 299a3ef41578e78ffe9ad001245566697e025b45 (HEAD -> master)
+Merge: 2d7ab35 8e84417
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:55:26 2024 +0000
+
+    Merging Feature with MASTER
+
+commit 2d7ab352f875c32803dc93b9c23e604080b5a427
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:52:20 2024 +0000
+
+    Added  master.txt at master branch
+
+commit 8e844178310e4ab5c157f1fe87e8b52bb8e9f77d (feature-branch)
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:49:41 2024 +0000
+
+    Added example_feature.txt at FEATURE branch
+
+commit 7e45af5a2a1b4cb70a719b1cb002eb5861b398d6
+Author: kumar <kumar@gmail.com>
+Date:   Tue Nov 5 01:45:05 2024 +0000
+
+    Initial commit with example.txt
+
+
+
+------------
+
+Conflict example
+----------------------
+
+
+Git $ echo "Hello, World!" > example.txt
+Git $ git add example.txt
+Git $ git commit -m "Initial commit with example.txt"
+[master (root-commit) 9dc14bf] Initial commit with example.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+Git $
+
+
+Git $ git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+Git $ git branch
+* feature-branch
+  master
+Git $ cat example.txt
+Hello, World!
+Git $ echo "This is a change in the feature branch." >> example.txt
+Git $ cat example.txt
+Hello, World!
+This is a change in the feature branch.
+Git $ git add example.txt
+Git $ git commit -m "Update example.txt in feature branch"
+[feature-branch a6c6525] Update example.txt in feature branch
+ 1 file changed, 1 insertion(+)
+Git $
+
+
+Git $ git checkout master
+Switched to branch 'master'
+Git $
+Git $ ls
+example.txt
+Git $ cat example.txt
+Hello, World!
+Git $ echo "This is a change in the main branch." >> example.txt
+Git $ cat example.txt
+Hello, World!
+This is a change in the main branch.
+Git $ git add example.txt
+Git $ git commit -m "Update example.txt in master branch"
+[master 5d25753] Update example.txt in master branch
+ 1 file changed, 1 insertion(+)
+Git $
+
+
+Git $ git merge feature-branch
+Auto-merging example.txt
+CONFLICT (content): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+---------------------
+
+Git Reset
+-------------
+
+Git’s reset command is powerful for undoing changes in your working directory and repository. 
+It can be used in different ways depending on the “mode” you choose: --soft, --mixed, or --hard.
+
+
+git reset --soft: Moves the HEAD pointer, keeps changes staged.
+Use Case: --soft is helpful if you want to edit the previous commit or re-commit it with a different message.
+
+
+git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
+Use Case: --mixed is useful if you want to keep changes in your working directory but decide not to stage or commit them.
+
+
+git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
+Use Case: --hard is best used when you want to discard all changes and reset your project to a previous commit.
+
+
+Summary:
+-----------
+git reset --soft: Moves the HEAD pointer, keeps changes staged.
+git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
+git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
+
+
+Git Restore
+-------------------
+Git's restore command is a helpful tool for undoing changes in your working directory or staging area. 
+
+====================================================
+
+how to set up a GitHub repository, connect it to Git Bash:
+---------------------------------------------------------------
+
+Create a Repository on GitHub
+
+Log in to GitHub: Go to GitHub and sign in to your account.
+
+
+Create a New Repository:
+
+Click on the + icon in the top right corner and select New repository.
+Enter a repository name and optionally a description.
+Choose whether you want the repository to be public or private.
+Click on Create repository.
+
+
+
+echo "# 06112024" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+
+git remote add origin https://github.com/discover-devops/06112024.git
+git push -u origin main
+
+origin = https://github.com/discover-devops/06112024.git
+-------------------------------------------------------
+
+
+git fetch
+------------
+The git fetch command downloads updates from a remote repository without merging them into your local branch. 
+
+$ git fetch origin
+
+$ git log origin/main --oneline
+
+$ git fetch origin feature-branch
+
+$ git branch -r
+==============================================
+
+
+git remote add origin <repository-url>
+
+git remote add myDevOpsProject <repository-url>
+
+git remote -v
+
+PUSH:
+git push origin main
+git push -u origin feature-branch
+
+
+PULL:
+git pull origin main
+
+
+git clone <repository-url>
+cd <repository-name>
+
+====================================================================
+
+
+Set Up Git and Connect Git Bash to GitHub
+-----------------------------------------------
+
+#1: Open Git Bash on your computer.
+
+#2: Configure Your Git Identity:
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+#3: Generate an SSH Key 
+
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+Press Enter to save the key to the default location and provide a passphrase if desired.
+
+home directory -----------> .ssh ------->
+
+1: Public Key  ------------> id_rsa.pub
+2: Private Key -----> id_rsa
+
+3.1: Copy Your SSH Key to GitHub:
+
+cat ~/.ssh/id_rsa.pub
+
+3.2: Add the SSH Key to GitHub:
+
+Go to your GitHub account, navigate to Settings > SSH and GPG keys, and click on New SSH key.
+
+# 4: Test the SSH Connection:
+ssh -T git@github.com
