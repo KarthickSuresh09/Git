@@ -20,3 +20,31 @@ git config --global user.email "kumar@gmail.com"
 git config --global core.editor "vi"
 git config --list
 
+Step # 4: Intialize the Git Repo
+git init
+Initialized empty Git repository in /root/myProjectA/.git/
+
+Step 5: Status
+git status
+On branch master
+No commits yet
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fileA.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+step 6: Add
+git add means ======> untracked area ---> git add ---> stagging area
+git add fileA.txt
+On branch master
+No commits yet
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   fileA.txt
+
+Step 7: commit
+git commit means ======> untracked area ---> git add ---> stagging area ---> git repo
+git commit -m "added a new file"
+[master (root-commit) 3a6fc9f] added a new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fileA.txt
