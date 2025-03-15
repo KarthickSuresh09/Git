@@ -7,3 +7,30 @@ step 2 : what ever the file git no needs to track put the name of the file insid
 step 3 : git add and git commit for .gitignore 
 
 step 4 : In .gitignore file if you entered eg: *.log, *.txt it menas everything it will ignore after you created new file also 
+
+
+
+GIT BRANCHING
+Git branching is a feature in Git that allows you to create separate lines of development within a repository.
+                      #2: Feature/bug fixing
+                 __________________________________________
+                 |                                        |
+                 |                                        |  #3 : Merge with main/master
+                 | #1: create branch                      |
+master or main   |                                        |                           
+=========================================================================>>FB         [server]
+
+
+Step 1 : creating branch
+It will create branch: git branch feature-branch
+It will list branch: git branch 
+If you want switch a branch: git checkout feature-branch
+If you want create branch & switch branch with single command : git checkout -b feature-branch
+if you create one branch sub brach automatically copy a files in the master branch 
+
+
+GIT MERGING
+ git merge feature-branch
+
+
+GIT 3WAY MERGING
