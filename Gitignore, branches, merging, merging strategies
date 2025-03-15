@@ -34,3 +34,24 @@ GIT MERGING
 
 
 GIT 3WAY MERGING
+
+
+
+GIt CONFLICT
+A Git conflict (or merge conflict) occurs when Git cannot automatically merge changes from different branches or 
+commits because the same part of a file has been modified differently. It requires manual intervention to resolve.
+
+Auto-merging example.txt
+CONFLICT (content): Merge conflict in example.txt
+Automatic merge failed; fix conflicts and then commit the result.
+vi "conflict file name"
+hello world
+<<<<<<< HEAD
+this is new line added in the mater-branch
+=======
+this is new line of the old file
+>>>>>>> feature-branch
+
+
+* git blame file name
+* git log --oneline --graph
