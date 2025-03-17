@@ -29,8 +29,33 @@ git reset --hard: Moves the HEAD pointer and discards changes from both staging 
 Use Case: --hard is best used when you want to discard all changes and reset your project to a previous commit.
 
 
-Command:
+Summary:
 -----------
 git reset --soft: Moves the HEAD pointer, keeps changes staged.
 git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
 git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
+
+
+Command:
+SOFT:
+git reset --soft HEAD~1
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   example.txt
+
+MIXED:
+git reset --mixed HEAD~1
+Unstaged changes after reset:
+M       example.txt
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   example.txt
+
+HARD:
+git reset --Hard HEAD~1
+HEAD is now at fe9d695 more NEW content
+On branch master
+nothing to commit, working tree clean
