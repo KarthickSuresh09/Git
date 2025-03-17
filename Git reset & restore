@@ -59,3 +59,8 @@ git reset --Hard HEAD~1  OR git reset --hard "commit ID" ====> it will work afte
 HEAD is now at fe9d695 more NEW content
 On branch master
 nothing to commit, working tree clean
+
+
+
+GIT RESTORE:
+git restore filename OR git restore --staged filename
