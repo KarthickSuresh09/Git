@@ -55,7 +55,7 @@ Changes not staged for commit:
         modified:   example.txt
 
 HARD:
-git reset --Hard HEAD~1  OR git reset --hard "commit ID"
+git reset --Hard HEAD~1  OR git reset --hard "commit ID" ====> it will work after this commit everything will gone
 HEAD is now at fe9d695 more NEW content
 On branch master
 nothing to commit, working tree clean
