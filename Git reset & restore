@@ -63,4 +63,4 @@ nothing to commit, working tree clean
 
 
 GIT RESTORE:
-git restore filename OR git restore --staged filename OR git restore --source=commitID filename
+git restore filename OR git restore --staged filename OR git restore --source=commitID filename OR git restore .
