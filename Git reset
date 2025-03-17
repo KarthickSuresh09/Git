@@ -1,0 +1,36 @@
+There is a three types of git reset
+* soft reset
+* mixed reset
+* Hard reset
+
+                                                          Git RESET
+                                                              |
+                                                              |
+                             _____________________________________________________________________       
+                            |                                 |                                   |
+                            |                                 |                                   |
+                        Soft reset                       Mixed reset                          Hard reset
+
+
+
+Git’s reset command is powerful for undoing changes in your working directory and repository. 
+It can be used in different ways depending on the “mode” you choose: --soft, --mixed, or --hard.
+
+
+git reset --soft: Moves the HEAD pointer, keeps changes staged.
+Use Case: --soft is helpful if you want to edit the previous commit or re-commit it with a different message.
+
+
+git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
+Use Case: --mixed is useful if you want to keep changes in your working directory but decide not to stage or commit them.
+
+
+git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
+Use Case: --hard is best used when you want to discard all changes and reset your project to a previous commit.
+
+
+Summary:
+-----------
+git reset --soft: Moves the HEAD pointer, keeps changes staged.
+git reset --mixed: Moves the HEAD pointer, removes changes from staging but keeps them in the working directory.
+git reset --hard: Moves the HEAD pointer and discards changes from both staging and working directory.
