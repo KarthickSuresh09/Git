@@ -31,5 +31,9 @@ git branch -r
 
 git pull origin main
 
-
-git cat-file -p
+log
+git cat-file -p 7cd14b4ad66
+tree
+git cat-file -p 5ef9d7836a
+blob
+git cat-file -p 70deb906
