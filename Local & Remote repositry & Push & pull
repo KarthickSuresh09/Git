@@ -30,3 +30,6 @@ git branch -r
 
 
 git pull origin main
+
+
+git cat-file -p
