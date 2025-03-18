@@ -12,4 +12,14 @@ git push -u origin main OR git push origin main
 
 
 FETCh
-git 
+The git fetch command downloads updates from a remote repository without merging them into your local branch. 
+
+git fetch orgin
+git log origin/main --oneline
+git fetch origin feature-branch
+git branch -r
+
+
+
+
+git pull origin main
