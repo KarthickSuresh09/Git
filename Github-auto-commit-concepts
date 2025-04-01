@@ -1,0 +1,59 @@
+You can set up an automation workflow in your GitHub repository that will auto-commit changes on a scheduled basis.
+
+Steps to Enable Auto Commit on GitHub:
+1. Go to Your GitHub Repository
+Open your repository on GitHub.
+
+2. Create a GitHub Actions Workflow
+Navigate to the Actions tab.
+Click New Workflow → Select Set up a workflow yourself.
+
+3. Create an Auto Commit Workflow
+Inside the editor, name the file auto_commit.yml and paste the following content:
+
+
+
+name: Auto Commit
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Runs every hour
+  workflow_dispatch:  # Allows manual execution
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make changes & Commit
+        run: |
+          echo "Auto update at $(date)" >> auto_commit_log.txt
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Auto commit: $(date)" || echo "No changes to commit"
+          git push
+
+
+
+Save and Commit the Workflow
+
+Click Start commit → Commit the file to the main branch.
+
+How It Works
+✅ Runs every hour automatically (you can change the cron schedule).
+✅ Commits changes to your repository if any files are modified.
+✅ Creates a file (auto_commit_log.txt) to track updates.
+✅ Runs without needing your PC – GitHub handles everything.
+
+Modifications
+Change cron: "0 * * * *" to
+
+"*/30 * * * *" → Runs every 30 minutes
+
+"0 0 * * *" → Runs daily at midnight
+
+Modify the echo command to update specific files or scripts in your repo.
