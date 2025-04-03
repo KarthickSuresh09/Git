@@ -20,8 +20,8 @@ System-level: Applies to all users on the system.
 Global-level: Applies to all repositories for the current user.
 Local-level: Applies only to the specific repository.
 
-git config --global user.name "kumar"
-git config --global user.email "kumar@gmail.com"
+git config --global user.name "KarthickSuresh09"
+git config --global user.email "karthickkatzy@gmail.com"
 git config --global core.editor "vi"
 git config --list
 
