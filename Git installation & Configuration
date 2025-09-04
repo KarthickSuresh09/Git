@@ -92,3 +92,15 @@ Date:   Fri Mar 14 09:17:10 2025 +0000
     added a new file
 
 
+Step 9: git branch -M main
+
+
+Step 10: git remote add origin https://github.com/KarthickSuresh09/practicing-git.git
+
+Step 11: git remote -v
+origin	https://github.com/KarthickSuresh09/practicing-git.git (fetch)
+origin	https://github.com/KarthickSuresh09/practicing-git.git (push)
+
+Step 12: git push -u origin main
+
+
