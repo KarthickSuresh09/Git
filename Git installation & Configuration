@@ -107,3 +107,8 @@ Username for 'https://github.com': KarthickSuresh09
 Settings ==> Developer settings ==> personal access tokens ==> Tokens classic : generate new token
 Password for 'https://github.com': enter the classic tokens
 
+
+
+Git pull commands
+ git pull origin main(main is branch name)
+
